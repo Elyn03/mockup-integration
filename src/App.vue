@@ -95,4 +95,15 @@ nav {
   width: 33px;
   height: auto;
 }
+
+.grey {
+ opacity: 0.7;
+}
+
+.green {
+  color: #4AD619;
+}
+.red {
+  color: #D61919;
+}
 </style>

@@ -8,12 +8,12 @@
       </div>
 
       <div class="menu">
-        <SideBarCard img="../../public/img/menu/invoices.png" txt="Invoices"/>
-        <SideBarCard img="../public/img/menu/clients.png" txt="Clients"/>
-        <SideBarCard img="../public/img/menu/invoices.png" txt="Products"/>
-        <SideBarCard img="../public/img/menu/invoices.png" txt="Messages"/>
-        <SideBarCard img="../public/img/menu/invoices.png" txt="Settings"/>
-        <SideBarCard img="@/public/img/menu/invoices.png" txt="Help"/>
+        <SideBarCard img="menu/invoices.png" txt="Invoices"/>
+        <SideBarCard img="menu/clients.png" txt="Clients"/>
+        <SideBarCard img="menu/products.png" txt="Products"/>
+        <SideBarCard img="menu/messages.png" txt="Messages"/>
+        <SideBarCard img="menu/settings.png" txt="Settings"/>
+        <SideBarCard img="menu/help.png" txt="Help"/>
       </div>
     </div>
 
@@ -78,7 +78,6 @@ export default {
   padding-top: 70px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
   gap: 30px;
 }
