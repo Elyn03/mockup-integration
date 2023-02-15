@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard">
+    <SideBar/>
     <MainPart msg="Welcome to Your Vue.js App"/>
-    <SideBar msg="Welcome to Your Vue.js App"/>
     <SideBarRight msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -26,5 +26,6 @@ export default {
 .dashboard {
   display: grid;
   grid-template-columns: 20% 55% 25%;
+  grid-template-rows: calc(100vh - 100px);
 }
 </style>
