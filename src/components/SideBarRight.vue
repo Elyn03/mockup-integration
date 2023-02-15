@@ -6,8 +6,8 @@
       <h2>Recent Transactions</h2>
 
       <div class="transCard">
-        <TransactionCard 
-          img="menu/invoices.png"
+        <TransactionCard
+          img="../../menu/invoices.png"
           name="Usdt"
           status="Received"
           money="+3.546"
