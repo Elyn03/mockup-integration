@@ -1,19 +1,24 @@
 <template>
   <nav>
     <div class="bloc1">
+
       <div class="logo">
-        <img src="../public/img/inance.png" alt="">
+        <img src="@/assets/inance.png" alt="">
         inance
       </div>
+
       <div class="welcome">Hi, Rogers</div>
+
       <div class="searchbar">
-        <img src="../public/img/search.png" alt="">
+        <img src="@/assets/search.png" alt="">
         <input type="text" placeholder="Search">
       </div>
-      <img src="../public/img/notif.png" alt="" class="notif">
+
+      <img src="@/assets/notif.png" alt="" class="notif">
+    
     </div>
 
-    <img src="../public/img/profil.png" alt="" class="bloc2">
+    <img src="@/assets/profil.png" alt="" class="bloc2">
     
   </nav>
   <router-view/>
@@ -22,7 +27,7 @@
 <style>
 @font-face {
 	font-family: 'Poppins-regular';
-	src: url('../public/Poppins-Regular.ttf');
+	src: url('assets/Poppins-Regular.ttf');
 }
 
 *  {
@@ -73,7 +78,7 @@ nav {
 .searchbar {
   padding-left: 23px;
   background-color: #fff;
-  width: 476px;
+  width: 35%;
   height: 50px;
   border-radius: 15px;
   display: flex;
@@ -99,11 +104,36 @@ nav {
 .grey {
  opacity: 0.7;
 }
-
 .green {
   color: #4AD619;
 }
 .red {
   color: #D61919;
+}
+.blue {
+  color: #1970D6;
+}
+.purple {
+  color: #6C1182;
+}
+
+
+@media screen and (max-width: 1500px) {
+  #app {
+    font-size: 14px;
+  }
+
+  .logo {
+  font-size: 25px;
+  font-weight: 800;
+  }
+  .welcome {
+    font-weight: 500;
+    font-size: 25px;
+  }
+
+  input {
+    width: 100%;
+  }
 }
 </style>

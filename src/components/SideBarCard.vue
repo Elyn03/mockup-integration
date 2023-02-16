@@ -1,8 +1,8 @@
 <template>
- <div class="card grey">
-  <img :src="require('../../public/img/' + img)" />
+ <a href="#" class="card grey">
+  <img :src="require('@/assets/' + img)" />
   {{ txt }}
- </div>
+ </a>
 </template>
 
 <script>
@@ -25,10 +25,19 @@ export default {
  align-items: center;
  justify-content: center;
  gap: 10px;
+
+ text-decoration: none;
+ color: #fff;
 }
 
 img {
   width: 38px;
   height: auto;
+}
+
+@media screen and (max-width: 1500px) {
+  .card {
+    font-size: 18px;
+  }  
 }
 </style>

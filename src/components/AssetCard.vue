@@ -1,13 +1,13 @@
 <template>
  <div class="card">
 
-  <img :src="img" />
+  <img :src="require('@/assets/' + img)" />
 
   <p>{{ name }}</p>
 
   <div class="other">
    <p>{{ money }}</p>
-   <p>{{ symbol }}</p>
+   <p>{{ abbreviated }}</p>
   </div>
   
  </div>
@@ -19,7 +19,7 @@ export default {
  props: {
   img: String,
   name: String,
-  symbol: String,
+  abbreviated: String,
   money: String
  }
 }
@@ -29,21 +29,33 @@ export default {
 <style scoped>
 .card {
  color: #000;
- padding: 32px;
- width: 407px;
- height: 174px;
- background: linear-gradient(99.56deg, #ebec9e 35.82%, #97e196 64.75%);
+ padding: 10px 30px;
+ width: 100%;
+ height: 50%;
  border-radius: 30px;
  display: flex;
  flex-direction: column;
- justify-content: center;
+ justify-content: space-between;
  align-items: flex-start;
- gap: 10px;
 }
 
 .other{
  display: flex;
  justify-content: space-between;
  width: 100%;
+
+ font-weight: 600;
+ font-size: 27px;
+}
+
+img {
+ width: 20%;
+ height: auto;
+}
+
+@media screen and (max-width: 1500px) {
+  .other {
+    font-size: 16px;
+  }
 }
 </style>

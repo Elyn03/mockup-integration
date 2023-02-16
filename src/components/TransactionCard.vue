@@ -1,17 +1,17 @@
 <template>
  <div class="card">
 
-  <img :src="img" />
+  <img :src="require('@/assets/' + img)" />
 
   <div class="stat1">
-   <p>{{ name }}</p>
-   <p class="grey"> {{ status }}</p>   
+    <p>{{ name }}</p>
+    <p class="grey"> {{ status }}</p>   
   </div>
 
   <div class="stat2">
-   <p v-if="money > 0" class="green">{{ money }}</p>
-   <p v-else class="red">{{ money }}</p>
-   <p class="grey">{{ date }}</p>
+    <p v-if="money > 0" class="green">{{ money }}</p>
+    <p v-else class="red">{{ money }}</p>
+    <p class="grey">{{ date }}</p>
   </div>
 
  </div>
@@ -19,13 +19,13 @@
 
 <script>
 export default {
- name: 'TransactionCard',
- props: {
-   img: String,
-   name: String,
-   status: String,
-   money: String,
-   date: String
+  name: 'TransactionCard',
+  props: {
+    img: String,
+    name: String,
+    status: String,
+    money: String,
+    date: String
  }
 }
 </script>
@@ -33,19 +33,24 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .card {
- /* width: 200px; */
- display: flex;
- justify-content: space-between;
- align-items: center;
+  /* width: 200px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .stat1, .stat2 {
- display: flex;
- flex-direction: column;
- align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .stat1{
- width: 110px;
+  width: 110px;
+}
+
+img {
+  width: 15%;
+  height: auto;
 }
 </style>

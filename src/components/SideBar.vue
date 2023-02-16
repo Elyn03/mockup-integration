@@ -3,7 +3,7 @@
 
     <div class="part1">
       <div class="dashboard">
-        <img src="../../public/img/menu/invoices.png" alt="">
+        <img src="@/assets/menu/invoices.png" alt="">
         Dashboard
       </div>
 
@@ -17,10 +17,10 @@
       </div>
     </div>
 
-    <div class="logout">
-      <img src="../../public/img/menu/logout.png" alt="">
+    <a href="#" class="logout grey">
+      <img src="@/assets/menu/logout.png" alt="">
       Log out
-    </div>
+    </a>
     
 
   </div>
@@ -39,7 +39,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .sidebarl {
-  padding: 50px;
+  padding: 50px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,14 +51,16 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 .dashboard {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 10px 30px;
   gap: 17px;
 
-  width: 253px;
+  width: 70%;
   height: 65px;
 
   background: linear-gradient(266.37deg, #FAFF00 -5.82%, #FAFF00 15.95%, #1970D6 41.2%, #6C1182 72.88%);
@@ -87,9 +89,18 @@ export default {
   gap: 15px;
   font-weight: 400;
   font-size: 25px;
+
+  text-decoration: none;
+  color: #fff;
 }
 .logout img {
   width: 40px;
   height: auto;
+}
+
+@media screen and (max-width: 1500px) {
+  .dashboard {
+    font-size: 18px;
+  }
 }
 </style>
