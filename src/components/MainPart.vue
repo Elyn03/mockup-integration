@@ -60,8 +60,9 @@ export default {
     GraphCard,
     RecentTransactionCard,
     MiniMenu
-  }
+  },
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -109,8 +110,8 @@ export default {
     content: "BTC";
     background-color: #fbff00;
     border-radius: 8px;
-    width: 49px;
-    height: 25px;
+    width: 25%;
+    height: 50%;
     font-weight: 700;
     font-size: 15px;
     color: #000;
@@ -136,8 +137,29 @@ export default {
 .transaction {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: space-around;
   width: 100%;
   padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .pop {
+    font-size: 18px;
+  }
+  .grey {
+  font-weight: 600;
+  font-size: 16px;
+  }
+  .pop::before{
+    font-size: 12px;
+  }
+  .top {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .transaction {
+    
+  }
 }
 </style>

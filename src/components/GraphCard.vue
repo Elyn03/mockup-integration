@@ -27,7 +27,7 @@
      </select>
     </div>
 
-    <img src="@/assets/arrows.png" alt="">
+    <img src="@/assets/arrows.png" class="arrow">
 
     <div class="select">
      <img src="@/assets/logo/etherum.png" alt="">
@@ -43,15 +43,80 @@
   </div>
 
   <div class="theGraph">
-   <img src="@/assets/graph2.png" alt="">
+   <canvas id="graph"></canvas>
   </div>
 
  </div>
 </template>
 
 <script>
+import Chart from 'chart.js'
+
 export default {
  name: 'GraphCard',
+ mounted() {
+  const graph = document.getElementById('graph').getContext('2d')
+  new Chart(graph, {
+   type: 'line',
+   data: {
+    labels: [
+     '5Nov',
+     '6Nov',
+     '7Nov',
+     '8Nov',
+     '9Nov',
+     '10Nov',
+     '11Nov',
+     '12Nov',
+     '13Nov',
+     '14Nov',
+     '15Nov',
+    ],
+    datasets: [
+     {
+      label: 'ETH',
+      data: [150, 600, 350, 250, 100, 400, 200, 450, 700, 400, 100],
+      borderColor: '#CC00FF',
+      backgrouncColor: 'transparent'
+     },
+     {
+      label: 'BTN',
+      data: [null, 200, 500, 250, 600, 450, 435, 600, 500, 600, null],
+      borderColor: '#FAFF00',
+      backgrouncColor: 'transparent'
+     },
+     {
+      label: 'ETH',
+      data: [null, null, null, null, 100, 400, 450, 300, 150, 400, 500],
+      borderColor: '#1970D6',
+      backgrouncColor: 'transparent'
+     }
+    ]
+   },
+   options: {
+    legend: {
+     display: false
+    },
+    tooltips: {
+     enabled: false
+    },
+    scales: {
+     xAxes: [{
+        gridLines: {
+           display: false
+        }
+     }],
+     yAxes: [{
+        gridLines: {
+           display: false,
+           drawOnChartArea: false
+
+        }
+     }]
+    }
+   }
+  })
+ }
 }
 </script>
 
@@ -76,8 +141,8 @@ img {
 }
 
 .date {
- padding: 10px;
- width: 15%;
+ padding: 5px;
+ width: 15%; 
  aspect-ratio: 1/1;
 
  background: #000000;
@@ -105,7 +170,7 @@ img {
 }
 .part1 {
  display: flex;
- gap: 10px;
+ justify-content: space-between;
  width: 40%;
  height: 100%;
 }
@@ -113,25 +178,23 @@ img {
 .part2 {
  display: flex;
  align-items: center;
- gap: 10px;
- width: 40%;
+ justify-content: space-between;
+ width: 35%;
  height: 100%;
 }
 
 .part2 img {
- height: 50%;
+ height: 40%;
  width: auto;
 }
 .select {
- width: 100%;
- height: 100%;
  height: auto;
  display: flex;
- justify-content: space-between;
+ gap: 5px;
  align-items: center;
  background: #000;
  border-radius: 5px;
- padding: 0 10px;
+ padding: 5px 10px;
 }
 
 .select img {
@@ -145,4 +208,43 @@ select{
  background: #000;
  color: #fff;
 }
+
+
+@media screen and (max-width: 1440px) {
+  .date {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+ .select {
+  padding: 5px;
+ }
+  .select img {
+    width: 25%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+ .card {
+  padding: 20px;
+ }
+
+ .part1 {
+  gap: ;
+ }
+ .date {
+  font-size: 12px;
+ }
+
+ .part2 {
+  width: 40%;
+ }
+ select {
+  font-size: 10px;
+ }
+}
+
+
 </style>

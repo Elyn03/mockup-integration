@@ -27,4 +27,10 @@ export default {
   display: grid;
   grid-template-columns: 20% 55% 25%;
 }
+
+@media screen and (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 15% 55% 30%;
+  }
+}
 </style>

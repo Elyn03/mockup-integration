@@ -46,7 +46,7 @@ export default {
 }
 
 .stat1{
-  width: 110px;
+  width: 25%;
 }
 
 img {

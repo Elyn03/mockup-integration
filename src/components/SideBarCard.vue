@@ -31,13 +31,19 @@ export default {
 }
 
 img {
-  width: 38px;
+  width: 20%;
   height: auto;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .card {
     font-size: 18px;
   }  
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    font-size: 12px;
+  }
 }
 </style>

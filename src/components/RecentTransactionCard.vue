@@ -46,33 +46,33 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .card {
- padding: 15px 50px;
- width: 100%;
- height: 30%;
- background: rgba(32, 35, 43, 0.7);
- border-radius: 30px;
+  padding: 3% 2%;
+  width: 100%;
+  height: 30%;
+  background: rgba(32, 35, 43, 0.7);
+  border-radius: 30px;
 
- display: flex;
- justify-content: space-between;
- align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .trade {
- width: 84.12px;
- height: 39px;
- background: #000000;
- border-radius: 30px;
+  width: 10%;
+  height: auto;
+  background: #000000;
+  border-radius: 30px;
 
- display: flex;
- justify-content: center;
- align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
- font-weight: 600;
- font-size: 17px;
+  font-weight: 600;
+  font-size: 17px;
 }
 .icon {
- width: 39px;
- height: auto;
+ width: auto;
+ height: 80%;
 }
 .outline {
  width: 143px;
@@ -84,4 +84,20 @@ export default {
  flex-direction: column;
  align-items: flex-start;
 }
+
+@media screen and (max-width: 1024px) {
+ .trade {
+  font-size: 12px;
+ }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    height: 20%;
+  }
+ .trade {
+    font-size: 10px;
+ }
+}
+
 </style>

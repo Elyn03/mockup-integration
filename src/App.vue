@@ -118,7 +118,7 @@ nav {
 }
 
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   #app {
     font-size: 14px;
   }
@@ -134,6 +134,18 @@ nav {
 
   input {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #app {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #app {
+    font-size: 10px;
   }
 }
 </style>

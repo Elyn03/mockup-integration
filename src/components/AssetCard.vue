@@ -53,7 +53,7 @@ img {
  height: auto;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .other {
     font-size: 16px;
   }

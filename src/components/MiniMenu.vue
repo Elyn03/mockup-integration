@@ -34,19 +34,18 @@ export default {
 .card {
  padding: 10px;
  width: 50%;
- height: 62px;
+ height: 50%;
  background: #292727;
  border-radius: 17px;
 
  display: flex;
- justify-content: center;
+ justify-content: space-around;
  align-items: center;
  gap: 5px;
 }
 
 .menu{
- width: 134px;
- height: 44px;
+ padding: 5px 10px;
  display: flex;
  justify-content: center;
  align-items: center;
@@ -56,11 +55,11 @@ export default {
 }
 
 .menu:hover {
- background: #0D0C0C;
+ background: #000;
  transition: 0.5s;
 }
 
 .active {
- background: #0D0C0C;
+ background: #000;
 }
 </style>

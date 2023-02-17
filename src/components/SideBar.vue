@@ -33,13 +33,14 @@ export default {
   components: {
     SideBarCard
   }
+
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .sidebarl {
-  padding: 50px 0;
+  padding: 20% 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,6 +52,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
 }
 .dashboard {
@@ -61,7 +63,7 @@ export default {
   gap: 17px;
 
   width: 70%;
-  height: 65px;
+  height: 10%;
 
   background: linear-gradient(266.37deg, #FAFF00 -5.82%, #FAFF00 15.95%, #1970D6 41.2%, #6C1182 72.88%);
   border-radius: 17px;
@@ -77,10 +79,10 @@ export default {
 }
 
 .menu {
-  padding-top: 70px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 30px;
 }
 .logout {
@@ -98,9 +100,28 @@ export default {
   height: auto;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1440px) {
   .dashboard {
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .dashboard {
+    font-size: 12px;
+  }
+
+  .logout {
+    font-size: large;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard img {
+    display: none;
+  }
+  .menu {
+    gap: 20px;
   }
 }
 </style>
