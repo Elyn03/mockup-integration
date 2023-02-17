@@ -231,9 +231,6 @@ select{
   padding: 20px;
  }
 
- .part1 {
-  gap: ;
- }
  .date {
   font-size: 12px;
  }
@@ -246,5 +243,28 @@ select{
  }
 }
 
+@media screen and (max-width: 426px) {
+ .part2 {
+  width: 50%;
+  gap: 10px;
+ }
+ .part2 > img {
+  width: 20px;
+  height: auto;
+ }
+}
+
+@media screen and (max-width: 376px) {
+ .part2 {
+  width: 60%;
+ }
+
+ .select img {
+  width: 30%;
+ }
+ .menu {
+  flex-direction: column;
+ }
+}
 
 </style>

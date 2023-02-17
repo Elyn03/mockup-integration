@@ -4,7 +4,7 @@
 
       <div class="logo">
         <img src="@/assets/inance.png" alt="">
-        inance
+        <span>inance</span>
       </div>
 
       <div class="welcome">Hi, Rogers</div>
@@ -79,18 +79,20 @@ nav {
   padding-left: 23px;
   background-color: #fff;
   width: 35%;
-  height: 50px;
+  height: 70%;
   border-radius: 15px;
   display: flex;
   align-items: center;
   gap: 15px;
 }
 .searchbar img {
-  height: 33px;
+  height: 70%;
   width: auto;
 }
 .searchbar input {
+  background: none;
   border: none;
+  width: 50%;
   height: auto;
   font-weight: 400;
   font-size: 25px;
@@ -146,6 +148,24 @@ nav {
 @media screen and (max-width: 768px) {
   #app {
     font-size: 10px;
+  }
+  nav {
+    height: 70px;
+  }
+  .searchbar input {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  #app {
+    font-size: 10px;
+  }
+  .logo span, .welcome {
+    display: none;
+  }
+  .searchbar {
+    padding-left: 5px;
   }
 }
 </style>

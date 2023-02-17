@@ -41,7 +41,7 @@ img {
   }  
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 426px) and (max-width: 768px) {
   .card {
     font-size: 12px;
   }

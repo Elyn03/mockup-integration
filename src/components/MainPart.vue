@@ -143,6 +143,9 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
+  .mainpart {
+    padding-bottom: 0;
+  }
   .pop {
     font-size: 18px;
   }
@@ -159,7 +162,15 @@ export default {
   }
 
   .transaction {
-    
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 426px) {
+ .top {
+    flex-direction: column;
+    padding: 10px;
   }
 }
 </style>

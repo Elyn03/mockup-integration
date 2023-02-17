@@ -62,4 +62,11 @@ export default {
 .active {
  background: #000;
 }
+
+@media screen and (max-width: 426px) {
+ .card {
+  width: 100%;
+ }
+}
+
 </style>

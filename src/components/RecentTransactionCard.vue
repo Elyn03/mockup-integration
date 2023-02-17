@@ -22,9 +22,7 @@
 
   <img :src="require('@/assets/' + imgOutline)" class="outline"/>
 
-  <div class="trade">
-   Trade
-  </div>
+  <div class="trade">Trade</div>
 
  </div>
 </template>
@@ -100,4 +98,34 @@ export default {
  }
 }
 
+@media screen and (max-width: 426px) {
+  .icon {
+    height: 20px;
+  }
+  .transaction {
+    gap: 10px;
+    justify-content: center;
+  }
+  .card {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .card {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .names, .market, .change {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .trade {
+    width: 50%;
+  }
+}
 </style>

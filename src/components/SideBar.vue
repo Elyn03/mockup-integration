@@ -2,7 +2,7 @@
   <div class="sidebarl">
 
     <div class="part1">
-      <div class="dashboard">
+      <div class="dashboard burger">
         <img src="@/assets/menu/invoices.png" alt="">
         Dashboard
       </div>
@@ -28,12 +28,13 @@
 
 <script>
 import SideBarCard from '@/components/SideBarCard.vue'
+// import menu from '@/menu'
+
 export default {
   name: 'SideBar',
   components: {
     SideBarCard
   }
-
 }
 </script>
 
@@ -106,7 +107,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 426px) and (max-width: 1024px) {
   .dashboard {
     font-size: 12px;
   }
@@ -122,6 +123,20 @@ export default {
   }
   .menu {
     gap: 20px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .sidebarl {
+    padding: 5% 0;
+    flex-direction: column-reverse;
+  }
+
+  .menu{
+    display: none;
+  }
+  .part1:hover .menu{
+      display: block;
   }
 }
 </style>

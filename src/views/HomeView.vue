@@ -33,4 +33,11 @@ export default {
     grid-template-columns: 15% 55% 30%;
   }
 }
+
+@media screen and (max-width: 426px) {
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+  }
+}
 </style>
