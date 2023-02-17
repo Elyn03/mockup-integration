@@ -91,7 +91,8 @@ export default {
 
 @media screen and (max-width: 768px) {
   .card {
-    height: 20%;
+    display: flex;
+    flex-wrap: wrap;
   }
  .trade {
     font-size: 10px;
@@ -109,13 +110,6 @@ export default {
   .card {
     margin: 10px 0;
   }
-}
-
-@media screen and (max-width: 376px) {
-  .card {
-    flex-direction: column;
-    gap: 5px;
-  }
   .names, .market, .change {
     width: 100%;
     display: flex;
@@ -123,7 +117,13 @@ export default {
     align-items: flex-start;
     justify-content: space-around;
   }
+}
 
+@media screen and (max-width: 376px) {
+  .card {
+    flex-direction: column;
+    gap: 5px;
+  }
   .trade {
     width: 50%;
   }

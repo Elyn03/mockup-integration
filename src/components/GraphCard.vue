@@ -212,7 +212,7 @@ select{
 
 @media screen and (max-width: 1440px) {
   .date {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -226,7 +226,7 @@ select{
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 376px) and (max-width: 768px) {
  .card {
   padding: 20px;
  }
@@ -255,16 +255,23 @@ select{
 }
 
 @media screen and (max-width: 376px) {
- .part2 {
-  width: 60%;
- }
+   .part1 {
+      width: 80%;
+   }
+   .part2 {
+      width: 100%;
+   }
 
- .select img {
-  width: 30%;
- }
- .menu {
-  flex-direction: column;
- }
+   .select {
+      justify-content: space-around;
+      align-items: center;
+   }
+   .select img {
+      width: 20%;
+   }
+   .menu {
+      flex-direction: column;
+   }
 }
 
 </style>

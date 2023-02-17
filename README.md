@@ -1,5 +1,7 @@
 # mockup-integration
 
+Project made for a 1773 x 954 screen with differents responsive : desktop, tablet and phone
+
 ## Project setup
 ```
 npm install

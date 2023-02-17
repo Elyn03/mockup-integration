@@ -63,7 +63,7 @@ export default {
  background: #000;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 768px) {
  .card {
   width: 100%;
  }

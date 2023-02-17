@@ -2,10 +2,10 @@
   <nav>
     <div class="bloc1">
 
-      <div class="logo">
+      <a href="#" class="logo">
         <img src="@/assets/inance.png" alt="">
         <span>inance</span>
-      </div>
+      </a>
 
       <div class="welcome">Hi, Rogers</div>
 
@@ -62,6 +62,8 @@ nav {
 }
 
 .logo {
+  text-decoration: none;
+  color: #fff;
   font-size: 32px;
   font-weight: 800;
 }
@@ -145,7 +147,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 426px) and (max-width: 768px) {
   #app {
     font-size: 10px;
   }
@@ -158,14 +160,15 @@ nav {
 }
 
 @media screen and (max-width: 426px) {
-  #app {
-    font-size: 10px;
-  }
   .logo span, .welcome {
     display: none;
   }
   .searchbar {
     padding-left: 5px;
+  }
+
+  nav {
+    height: 70px;
   }
 }
 </style>

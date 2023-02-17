@@ -28,12 +28,23 @@
 
 <script>
 import SideBarCard from '@/components/SideBarCard.vue'
-// import menu from '@/menu'
 
 export default {
   name: 'SideBar',
   components: {
     SideBarCard
+  },
+  mounted(){
+    let menu = document.querySelector('.menu')
+    let dashboard = document.querySelector('.burger')
+
+    dashboard.addEventListener('click',()=>{
+      if(menu.style.display == "none"){
+        menu.style.display = "flex";
+      }else{
+        menu.style.display = "none";
+      }
+    })
   }
 }
 </script>
@@ -133,10 +144,8 @@ export default {
   }
 
   .menu{
+    padding-top: 10px;
     display: none;
-  }
-  .part1:hover .menu{
-      display: block;
   }
 }
 </style>

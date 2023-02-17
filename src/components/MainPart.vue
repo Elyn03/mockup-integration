@@ -4,7 +4,7 @@
     <div class="balance">
 
       <div class="title">
-        <h3>Total Balance</h3>
+        <h2>Total Balance</h2>
       </div>
 
       <div class="top">
@@ -26,7 +26,7 @@
     <div class="transaction">
 
       <div class="title">
-        <h3>Recent Transactions</h3>
+        <h2>Recent Transactions</h2>
         <h3>See all coins</h3>
       </div>
 
@@ -143,6 +143,10 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    padding: 10px;
+  }
   .mainpart {
     padding-bottom: 0;
   }
@@ -164,13 +168,6 @@ export default {
   .transaction {
     display: flex;
     flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 426px) {
- .top {
-    flex-direction: column;
-    padding: 10px;
   }
 }
 </style>
